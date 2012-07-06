@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Transition 1 Demo</title>
+    <style>
+      #myBox {
+        width:100px;
+        height:100px;
+        border:2px solid #000;
+        background-color:red;
+      }
+      
+      #myBox:hover {
+        background-color:blue;
+        width:300px;
+      }
+    
+      #myBox {
+    	  -webkit-transition: all 1s ease-in-out;
+    	  -moz-transition: all 1s ease-in-out;
+    	  -o-transition: all 1s ease-in-out;
+    	  transition: all 1s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myBox"></div>
+  </body>
+</html>
