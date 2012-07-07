@@ -407,6 +407,10 @@ var touchStart = function(event) {
   
   var thingClickedOn = event.target;
   var howManyTouches = event.touches.length;
+    
+  var thingClickedOn1 = event.targetTouches[0];
+  var thingClickedOn2 = event.targetTouches[1];
+
   
 }
             </code></pre>            
@@ -457,6 +461,15 @@ function gestureChange(event) {
         <section>
           <section>
             <h2>LocalStorage</h2>
+            <p>Take it away Brock Whitten</p>
+          </section>
+          <section>
+            <h2>API</h2>
+            
+            <pre><code contenteditable>
+localStorage.setItem(...);
+localStorage.getItem(...);
+            </code></pre>
           </section>
           
         </section>
