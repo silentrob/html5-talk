@@ -185,12 +185,26 @@ Animations add KeyFrames to tween at different times.
 ### Gesture Events
 ## Live Demo
 
+
 ## LocalStorage
 
-### API
+ - Were and when to use it.
+ 
+
+### API Overview
 
     setItem
    
     getItem
     
+    ...
     
+    
+### Web Inspector Demo
+
+### Make it useful -- DEMO with Twitter
+
+  offline-ability
+  
+### Lawnchair
+

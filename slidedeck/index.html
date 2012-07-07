@@ -25,6 +25,22 @@
 		    background:rgba(0,0,0,0) !important;
 		    -webkit-box-shadow:none !important;
 		  }
+		  
+      #demo1 {
+        border:2px solid #000 !important;
+      }
+
+      #demo1:hover {
+        background-color:#fff !important;
+        border:2px solid #f04 !important;
+      }
+
+      #demo1 {
+    	  -webkit-transition: all 1s ease-in-out !important;
+    	  -moz-transition: all 1s ease-in-out;
+    	  -o-transition: all 1s ease-in-out;
+    	  transition: all 1s ease-in-out;
+      }		  
 
 		</style>
 	</head>
@@ -58,31 +74,117 @@
 					<p>LocalStorage</p>					
 				</section>
 								
-				<section>
-					<h2>Why CSS3 Transitions?</h2>
-          <ul>
-            <li>Hardware acceleration
-            <li>Mobile devices != Desktop computers
-          </ul>
-				</section>
 
 				<section>
-					<h2>Transitions</h2>
-					<p>Syntax:</p>
-					<pre><code contenteditable> transition:  [ &lt;transition-property&gt; ||
-               &lt;transition-duration&gt; ||
-               &lt;transition-timing-function&gt; ||
-               &lt;transition-delay&gt; ]
-					</code></pre>
+  				<section>
+  					<h2>Why CSS3 Transitions?</h2>
+            <ul>
+              <li>Hardware acceleration
+              <li>Mobile devices != Desktop computers
+            </ul>
+  				</section>
+				  
+					<section>
+					  <h2>Browser Support</h2>
+            <ul>
+              <li>Safari 3.2
+              <li>Chrome 1
+              <li>FireFox 4.0
+              <li>Opera 10.5
+              <li>IE 10
+            </ul>
+            					  
+          </section>
+
+					<section>
+					  <h2>Vendors</h2>
+					  <p>Vendor Prefix for most browsers</p>
+					  <pre><code contenteditable>
+                -webkit-transition: ... ;
+                -moz-transition: ... ;
+                -o-transition: ... ;
+                transition: ... ;
+					  </code></pre>
+          </section>
+
+					<section>
+					  <h2>Syntax &amp; Short Hand Notation</h2>
+
+  					<pre><code contenteditable> transition:  [ &lt;transition-property&gt; ||
+                &lt;transition-duration&gt; ||
+                &lt;transition-timing-function&gt; ||
+                &lt;transition-delay&gt; ]
+  					</code></pre>
+					  
+					  <pre><code contenteditable> -webkit-transition: all 1s ease-in-out;
+					  </code></pre>
+          </section>
+
+					<section>
+					  <h2>Extended Notation</h2>
+					  <pre><code contenteditable>
+              -webkit-transition-property: all;
+              -webkit-transition-duration: 1s;
+              -webkit-transition-timing-function: linear;
+              -webkit-transition-delay: 0s;
+					  </code></pre>
+          </section>
+          
+					<section>
+					  <h2>JavaScript Notation</h2>
+					    <pre><code contenteditable>
+              var el = document.getElementById('myDiv');
+
+              el.style.transitionProperty = "top";
+              el.style.transitionDuration = "1s";
+              el.style.transitionTimingFunction = "linear";
+              el.style.transitionDelay = '0s';
+
+					  </code></pre>
+          </section>          
+
+					<section>
+					  <h2>Timing functions</h2>
+					  <p>Default - Built in</p>
+            <pre><code contenteditable>linear
+ease
+ease-in
+ease-out
+ease-in-out </code></pre>
+            
+            <p>Or Create your own:</p>
+            <pre><code contenteditable>cubic-bezier(n,n,n,n) </code></pre>
+<p style="font-size:15px">Using Bézier Curves control points x1,y1,x2,y2 you can even have more control over how the elements are animated.</p>
+<p style="font-size:15px">BUG: https://bugs.webkit.org/show_bug.cgi?id=45761</p>
+<p style="font-size:15px">http://cubic-bezier.com/</p>
+          </section>
+  				<section>
+  					<h2>Demo</h2>
+            
+					    <pre ><code  id="demo1" contenteditable>
+	        &lt;style&gt;
+                  #myBox {
+                    border:2px solid #000;
+                  }
+
+                  #myBox:hover {
+                    background-color:#fff;
+                    border:2px solid #f04;
+                  }
+
+                  #myBox {
+                	  -webkit-transition: all 1s ease-in-out;
+                	  -moz-transition: all 1s ease-in-out;
+                	  -o-transition: all 1s ease-in-out;
+                	  transition: all 1s ease-in-out;
+                  }
+                &lt;/style&gt;
+                &lt;div id="mybox"&gt;&lt;/div&gt;
+            </code></pre>
+  				</section>
+
 				</section>
 				
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,<br/>
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
 
 				<section>
 					<h2>Fragmented Views</h2>
