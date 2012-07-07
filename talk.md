@@ -184,3 +184,13 @@ Animations add KeyFrames to tween at different times.
 ### Touch Events
 ### Gesture Events
 ## Live Demo
+
+## LocalStorage
+
+### API
+
+    setItem
+   
+    getItem
+    
+    
