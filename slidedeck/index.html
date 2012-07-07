@@ -35,12 +35,62 @@
         border:2px solid #f04 !important;
       }
 
-      #demo1 {
+      .demo {
     	  -webkit-transition: all 1s ease-in-out !important;
     	  -moz-transition: all 1s ease-in-out;
     	  -o-transition: all 1s ease-in-out;
-    	  transition: all 1s ease-in-out;
-      }		  
+    	  transition: all 1s ease-in-out;    	  
+      }	
+
+      #demo2:hover {
+      	-webkit-transform:skew(35deg);
+      }
+
+      #demo3:hover {
+      	-webkit-transform:scale(1.3,0.5);
+      }
+      
+      #demo4:hover {
+        -webkit-transform:rotate(45deg);
+      } 
+      
+      #demo5:hover {
+        -webkit-transform:translate(10px, 20px);
+      } 
+      
+      #demo6:hover {
+        -webkit-transform:rotateX(180deg);
+      }
+
+      #demo7:hover {
+        -webkit-transform:rotateY(180deg);
+      }
+
+      #demo8:hover {
+        -webkit-transform:rotateZ(180deg);
+      }
+      
+      #pro {
+    	  -webkit-perspective: 800px;
+  	  }
+
+      #demo9, #demo10, #demo11 {
+        -webkit-transform-origin:20% 40%
+      }
+
+      #demo9:hover {
+        -webkit-transform:rotateX(180deg);
+      }
+
+      #demo10:hover {
+        -webkit-transform:rotateY(180deg);
+      }
+
+      #demo11:hover {
+        -webkit-transform:rotateZ(180deg);
+        
+      }
+      	  
 
 		</style>
 	</head>
@@ -161,7 +211,7 @@ ease-in-out </code></pre>
   				<section>
   					<h2>Demo</h2>
             
-					    <pre ><code  id="demo1" contenteditable>
+					    <pre ><code class="demo" id="demo1" contenteditable>
 	        &lt;style&gt;
                   #myBox {
                     border:2px solid #000;
@@ -187,36 +237,162 @@ ease-in-out </code></pre>
 				
 
 				<section>
-					<h2>Fragmented Views</h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment">... to step through ...</p>
-					<ol>
-						<li class="fragment"><code>any type</code></li>
-						<li class="fragment"><em>of view</em></li>
-						<li class="fragment"><strong>fragments</strong></li>
-					</ol>
+				  <section>
+					  <h2>Transforms</h2>
+            <p>2 Flavours of transforms, 2D and 3D</p>					  
+				  </section>
+				  <section>
+            <h2>2D Browser Support</h2>
+            <ul>
+              <li>Safari 3.2</li>
+              <li>Chrome 1</li>
+              <li>FireFox 3.5</li>
+              <li>Opera 10.5</li>
+              <li>IE 9</li>
+            </ul>
+          </section>
+          <section>
+            <h2>2D Examples</h2>
+            
+  					  <pre class="demo" id="demo2" ><code  contenteditable>
+ #demo2 {
+  transform:skew(35deg);
+ } 
+              </code></pre>            
+              <pre class="demo" id="demo3" ><code  contenteditable>
+ #demo3 {
+   transform:scale(1.3,0.5);
+ } 
+             </code></pre>
+            <pre class="demo" id="demo4" ><code  contenteditable>
+ #demo4 {
+   transform:rotate(45deg);
+ } 
+           </code></pre>                           
+            <pre class="demo" id="demo5" ><code  contenteditable>
+ #demo5 {
+  transform:translate(10px, 20px);
+ } 
+           </code></pre>                           
+<p style="font-size:15px">NB: Vendor prefixes removed.</p>
+          </section>
+          <section>
+            <h2>3D Browser Support</h2>
+            <ul>
+              <li>Safari 4</li>
+              <li>Chrome 12</li>
+              <li>FireFox 10</li>
+              <li>Opera 12</li>
+              <li>IE 10</li>
+            </ul>            
+          </section>
+          
+          <section>
+            <h2>3D Examples</h2>
+
+  					  <pre class="demo" id="demo6" ><code contenteditable>
+ #demo6 {
+  transform:rotateX(180deg);
+ } 
+              </code></pre>            
+
+   					  <pre class="demo" id="demo7" ><code contenteditable>
+  #demo7 {
+   transform:rotateY(180deg);
+  } 
+               </code></pre>            
+
+  					  <pre class="demo" id="demo8" ><code contenteditable>
+ #demo8 {
+  transform:rotateZ(180deg);
+ } 
+              </code></pre>            
+  
+<p style="font-size:15px">NB: Vendor prefixes removed.</p>
+          </section>
+          <section id="pro">
+            <h2>3D Examples in Perspective</h2>
+
+  					  <pre class="demo" id="demo9" ><code contenteditable>
+ #viewPort {
+   perspective: 800px;
+ }
+ 
+ #demo9 {
+  transform-origin:20% 40%;
+  transform:rotateX(180deg);
+ } 
+              </code></pre>            
+
+   					  <pre class="demo" id="demo10" ><code contenteditable>
+ #viewPort {
+   perspective: 800px;
+ }
+
+ #demo10 {
+   transform-origin:20% 40%;
+   transform:rotateY(180deg);
+ } 
+               </code></pre>
+  					  <pre class="demo" id="demo11" ><code contenteditable>
+ #viewPort {
+   perspective: 800px;
+ }
+ 
+ #demo11 {
+  transform-origin:20% 40%;
+  transform:rotateZ(180deg);
+ } 
+              </code></pre>
+
+
+<p style="font-size:15px">NB: Vendor prefixes removed.</p>
+          </section>
 				</section>
 				
 				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://hakim.se/experiments/html5/breakdom/" target="_blank">
-						<img width="320" height="412" src="https://s3.amazonaws.com/hakim-static/reveal-js/breakdom.png">
-					</a>
-				</section>
-				
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on github</a></li>
-						<li><a href="http://hakim.se/projects/reveal-js">Read more on my site</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
-				
-				<section>
-					<h1>THE END</h1>
-					<h3 class="inverted">BY Hakim El Hattab / hakim.se</h3>
-				</section>
+				  <section>
+				    <h2>Animations</h2>
+				    <p>Tying everything together</p><br /><br />
+				    <p>Animations were first added in WebKit in 2007. In 2009, <br />the W3C updated the working draft and other browsers later added support.</p>
+            
+          </section>
+          <section>
+            <h2>Animation Browser Support</h2>
+            <ul>
+              <li>Safari 4</li>
+              <li>Chrome 4</li>
+              <li>FireFox 5</li>
+              <li>Opera 12</li>
+              <li>IE 10</li>
+            </ul>            
+          </section>
+          <section>
+            <h2>Syntax Keyframes</h2>
+          </section>
+          <section>
+            <h2>Demo</h2>
+          </section>
+          
+        </section>
+
+        <section>
+				  <section>
+				    <h2>Events</h2>
+            <p>To Flavours, touch vs gesture</p>
+          </section>
+          <section>
+            <h2>Touch Deep Dive</h2>
+          </section>
+          <section>
+            <h2>Syntax Keyframes</h2>
+          </section>
+          <section>
+            <h2>Demo</h2>
+          </section>
+          
+        </section>        
+
 			</div>
 
 			<!-- The navigational controls UI -->
