@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Event 1 Demo</title>
+    <style>
+      .box {
+        position:absolute;
+        width:100px;
+        height:100px;
+        border:2px solid #000;
+        background-color:#ccc;
+      }
+      
+    </style>
+    <script src="zepto.min.js"></script>
+    <script>
+    
+    (function(){
+      TouchDemo = function() {
+        
+        $('.box').bind('touchstart', function(e){
+          e.preventDefault();          
+        })
+        
+        .bind('touchmove', function(e){
+          var curX = e.targetTouches[0].pageX - 50;
+          var curY = e.targetTouches[0].pageY - 50;
+          
+          e.targetTouches[0].target.style.webkitTransform =
+              'translate(' + curX + 'px, ' + curY + 'px)';        
+        })
+        
+        .bind('touchend touchcancel', function(e){
+        });
+      }
+    }).call(this)
+    
+    
+    $(document).ready(function(){
+      new TouchDemo();
+    })
+    
+    </script>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

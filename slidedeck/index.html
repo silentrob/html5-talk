@@ -379,19 +379,88 @@ ease-in-out </code></pre>
         <section>
 				  <section>
 				    <h2>Events</h2>
-            <p>To Flavours, touch vs gesture</p>
+            <p>Two Flavours, touch vs gesture</p>
+            <ul>
+              <li>iOS Supports both</li>
+              <li>Android only supports touch</li>
+            </ul>
           </section>
           <section>
             <h2>Touch Deep Dive</h2>
+            <p>JavaScript Syntax</p>
+            <pre><code contenteditable>
+var el = document.getElementById('myDiv');
+
+el.addEventListener("touchstart", touchStart, false);
+el.addEventListener("touchmove", touchMove, false);
+el.addEventListener("touchend", touchEnd, false);
+el.addEventListener("touchcancel", touchCancel, false);
+            </code></pre>
           </section>
           <section>
-            <h2>Syntax Keyframes</h2>
+            <h2>touchstart</h2>
+            
+            <pre><code contenteditable>
+var touchStart = function(event) {
+  
+  event.preventDefault();
+  
+  var thingClickedOn = event.target;
+  var howManyTouches = event.touches.length;
+  
+}
+            </code></pre>            
           </section>
           <section>
             <h2>Demo</h2>
+            
           </section>
           
         </section>        
+
+        <section>
+          <section>
+            <h2>Gestures</h2>
+            <p>For simple multi-touch events</p>
+          </section>
+          <section>
+            <p>JavaScript Syntax</p>
+            <pre><code contenteditable>
+var el = document.getElementById('myDiv');
+
+element.addEventListener("gesturestart", gestureStart, false);
+element.addEventListener("gesturechange", gestureChange, false);
+element.addEventListener("gestureend", gestureEnd, false);
+
+            </code></pre>
+
+          </section>            
+          <section>
+            <h2>Scale &amp; Rotate</h2>
+            <pre><code contenteditable>
+function gestureChange(event) {
+  // Insert your code here
+}
+            </code></pre>
+
+            <pre><code contenteditable>
+var scale = event.scale;
+            </code></pre>
+
+            <pre><code contenteditable>
+var angle = event.rotation;
+            </code></pre>
+            <p style="font-size:15px">No touches :(</p>
+
+          </section>
+
+          <section>
+            <h2>Demo</h2>
+            
+          </section>
+          
+        </section>
+
 
 			</div>
 

@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Event 1 Demo</title>
+    <style>
+      .box {
+        position:absolute;
+        top:130px;
+        left:300px;
+        width:100px;
+        height:100px;
+        border:2px solid #000;
+        background-color:#ccc;
+      }
+      
+    </style>
+    <script src="zepto.min.js"></script>
+    <script>
+    
+    (function(){
+      GestureDemo = function() {
+        
+        $('.box').bind('gesturestart', function(e){
+          e.preventDefault();
+        })
+        
+        .bind('gesturechange', function(e){
+          
+          var startScale = 100;
+          var startRotation = 0;
+          
+          e.target.style.webkitTransform =
+                  'scale(' + e.scale  + startScale  + ') rotate(' + e.rotation + startRotation + 'deg)';
+        })        
+      }
+    }).call(this)
+    
+    
+    $(document).ready(function(){
+      new GestureDemo();
+    })
+    
+    </script>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
