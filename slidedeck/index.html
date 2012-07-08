@@ -545,21 +545,89 @@ function gestureChange(event) {
           
         </section>
         
-        <section>
-          <section>
-            <h2>LocalStorage</h2>
-            <p>Take it away Brock Whitten</p>
-          </section>
-          <section>
-            <h2>API</h2>
-            
-            <pre><code contenteditable>
-localStorage.setItem(...);
-localStorage.getItem(...);
-            </code></pre>
-          </section>
-          
-        </section>
+<section>
+  <section>
+    <h2>LocalStorage</h2>
+  </section>
+  
+  <section>
+    <h2>API</h2>
+    <ul>
+      <li><code>setItem(key, val)</code></li>
+      <li><code>getItem(key)</code></li>
+      <li><code>removeItem(key)</code></li>
+      <li><code>length</code></li>
+      <li><code>key(index)</code></li>
+      <li><code>clear()</code></li>
+    </ul>
+  </section>
+  
+  <section>
+    <h2>Availability/Security</h2>
+    <ul>
+      <li>domain</li>
+      <li>subdomain</li>
+      <li>port</li>
+      <li>protocol</li>
+    </ul>
+  </section>
+  
+  <section>
+    <h2>Does not change scope</h2>
+    <ul>
+      <li>browser refreshes</li>
+      <li>url changes</li>
+      <li>query params</li>
+    </ul>
+  </section>
+  
+  <section>
+    <h2>Use Cases</h2>
+    <ul>
+      <li>cache data for performance improvements</li>
+      <li>non-critical user preferences</li>
+      <li>offline support</li>
+      <li>non authenticated application data</li>
+    </ul>
+  </section>
+  
+  <section>
+    <h2>Basic Example</h2>
+    <pre><code>
+localStorage.setItem("city", "Vancouver")
+localStorage.getItem("city")
+localStorage.removeItem("city")
+    </code></pre>
+  </section>
+  
+  <section>
+    <h2>Gotcha</h2>
+    <pre><code>
+var user = {
+  name: "Brock Whitten",
+  score: 12345
+}
+
+// don't do this
+localStorage.setItem("user", user)
+localStorage.getItem("user")
+
+// do this
+localStorage.setItem("user", JSON.stringify(user))
+JSON.parse(localStorage.getItem("user"))
+    </code></pre>
+  </section>
+  
+  <section>
+    <h2>Abstractions</h2>
+    <ul>
+      <li>none (are you sure you need one?)</li>
+      <li>store.js</li>
+      <li>lawnchair.js</li>
+    </ul>
+  </section>
+    
+</section>
 
         <section>
           <h2>Thanks</h2>
