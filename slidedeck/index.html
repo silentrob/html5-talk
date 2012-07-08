@@ -87,10 +87,47 @@
       }
 
       #demo11:hover {
-        -webkit-transform:rotateZ(180deg);
-        
+        -webkit-transform:rotateZ(180deg); 
       }
-      	  
+      
+      @-webkit-keyframes myFirstAnimation {
+        0% {
+          padding: 0;
+        }
+        50% {
+          padding: 0 20px;
+        }
+        100% {
+          padding: 0 100px;
+        }
+      }      	  
+      
+      #demo12 {
+        background-color:#3F3F3F;
+        -webkit-animation-name: myFirstAnimation;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-timing-function: ease-in-out;        
+      }
+
+      @-webkit-keyframes mySecondAnimation {
+        from {
+          padding: 0;
+        }
+        to {
+          padding: 0 100px;
+        }
+      }
+      
+      #demo13 {
+        background-color:#3F3F3F;
+        -webkit-animation-name: mySecondAnimation;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-timing-function: ease-in-out;        
+      }
 
 		</style>
 	</head>
@@ -357,6 +394,7 @@ ease-in-out </code></pre>
 				    <p>Animations were first added in WebKit in 2007. In 2009, <br />the W3C updated the working draft and other browsers later added support.</p>
             
           </section>
+
           <section>
             <h2>Animation Browser Support</h2>
             <ul>
@@ -367,12 +405,61 @@ ease-in-out </code></pre>
               <li>IE 10</li>
             </ul>            
           </section>
+          
           <section>
-            <h2>Syntax Keyframes</h2>
+            <h2>Animation Syntax</h2>
+            <pre><code contenteditable>
+animation: &lt;name&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt; &lt;iteration-count&gt; &lt;direction&gt;;
+            </code></pre>
+            
+            <pre><code contenteditable>
+animation-name: myFirstAnimation;
+animation-iteration-count: infinite; // 0 - n or infinite
+animation-direction: alternate;
+animation-play-state: running; // not well supported
+
+animation-duration: 1s;
+animation-timing-function: ease-in-out;
+            </code></pre>
+            <pre id="demo12"><code contenteditable>
+@keyframes myFirstAnimation {
+  0% {
+    padding: 0;
+  }
+  50% {
+    padding: 0 20px;
+  }
+  100% {
+    padding: 0 100px;
+  }
+}
+            </code></pre>
+            
+            <p style="font-size:15px">NB: Vendor prefixes removed.</p>                    
           </section>
-          <section>
-            <h2>Demo</h2>
-          </section>
+          <section>          
+            <h2>Alternate Animation Syntax</h2>
+            <pre ><code contenteditable>
+animation-name: mySecondAnimation;
+animation-iteration-count: infinite; // 0 - n or infinite
+animation-direction: normal;
+animation-play-state: running; // not well supported
+
+animation-duration: 1s;
+animation-timing-function: ease-in-out;
+            </code></pre>
+            <pre id="demo13"><code contenteditable>
+@keyframes mySecondAnimation {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0 100px;
+  }
+}
+            </code></pre>            
+            <p style="font-size:15px">NB: Vendor prefixes removed.</p>                    
+          </section>          
           
         </section>
 
